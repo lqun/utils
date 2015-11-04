@@ -32,7 +32,7 @@
 		         <li class="dropdown">
 		           <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">其它工具<span class="caret"></span></a>
 		           <ul class="dropdown-menu">
-		             <li><a href="javascript:void(0);" id="oth_0">大小写转换</a></li>
+		             <li><a href="javascript:void(0);" id="oth_0">字母大小写转换</a></li>
 		             <li><a href="javascript:void(0);" id="oth_1">js加密/解密</a></li>
 		             <li><a href="javascript:void(0);" id="oth_2">Something else here</a></li>
 		           </ul>

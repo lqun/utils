@@ -32,6 +32,22 @@ utils.bind = {
 		});
 	}
 };
+utils.tools={
+	submitForm:function(formId) {
+		$.ajax({
+			url: $("#"+formId).attr("action"),
+            type: 'post',
+            dataType: 'text',
+            data: $("#"+formId).serialize(),
+            success: function (data) {
+            	var result = $.parseJSON(data);
+            	$("#target").val(result);
+            },
+            error:function(){
+            }
+		});
+	}
+};
 $(function(){
 	utils.init();
 });
