@@ -21,8 +21,10 @@ utils.bind = {
 		$("a[id^='oth']").click(function(){
 			var _this = $(this);
 			var _id = _this.attr("id");
-			if (_id == 'oth_0') {
-				window.location.href="/other/convertPage";
+			if (_id == 'oth_0') {// 字母大小写转换
+				window.location.href="/other/convertPage?type=1";
+			} else if (_id == "oth_1") {// js加密、解密
+				window.location.href="/other/convertPage?type=2";
 			}
 		});
 	},

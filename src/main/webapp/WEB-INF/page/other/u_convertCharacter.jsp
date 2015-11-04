@@ -18,7 +18,7 @@
 	  <li><a href="Javascript:void(0)">其它工具</a></li>
 	  <li class="active">字母大小写转换</li>
 	</ol>
-        <form id="convert" role="form" action="/other/convertCharacter">
+        <form id="convertFrm" role="form" action="/other/convertCharacter">
           <input type="hidden" id="type" name="type" value="big" />
 		  <div class="form-group">
 		    <label for="name">请输入您要转换的内容:</label>
