@@ -15,7 +15,7 @@ public class UtilsConstantEnum {
 	 */
 	public enum OtherTypeEnum {
 		OTHER_TYPE_CHAR("1", "字母大小写转换", "other/u_convertCharacter"),
-		OTHER_TYPE_JS("2", "js加密/解密", ""),
+		OTHER_TYPE_JS("2", "js加密/解密", "other/u_jsOperate"),
 		OTHER_TYPE_RMB(" 3", "人民币大小写转换", "");
 		
 		private String typeCode; // 类型

@@ -16,17 +16,17 @@
   	<div class="col-md-9 col-md-offset-1">
   	<ol class="breadcrumb">
 	  <li><a href="Javascript:void(0)">其它工具</a></li>
-	  <li class="active">字母大小写转换</li>
+	  <li class="active">js加密/解密</li>
 	</ol>
-        <form id="convertFrm" role="form" action="/other/convertCharacter">
-          <input type="hidden" id="type" name="type" value="big" />
+        <form id="jsoperateFrm" role="form" action="/other/jsoperate">
+          <input type="hidden" id="type" name="type" value="encryption" />
 		  <div class="form-group">
 		    <label for="name">请输入您要转换的内容:</label>
 		    <textarea id="target" name="target" class="form-control" rows="15" cols="10"></textarea>
 		  </div>
 		</form>
-		<button type="button" id="other_big" class="btn btn-success">转换成大写</button>
-		<button type="button" id="other_small" class="btn btn-info">转换成小写</button>
+		<button type="button" id="other_encryption" class="btn btn-success">js加密</button>
+		<button type="button" id="other_decrypt" class="btn btn-info">js解密</button>
      </div>
   </div>
 </div>

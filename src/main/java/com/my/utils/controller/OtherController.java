@@ -43,12 +43,30 @@ public class OtherController {
 	 */
 	@ResponseBody
 	@RequestMapping("/convertCharacter")
-	public String convertCharacter(ModelMap map, HttpServletRequest request) {
+	public String convertCharacter(HttpServletRequest request) {
 		String value = StringUtils.defaultIfBlank(request.getParameter("target"), "");// 需要转化的内容
 		String type = StringUtils.defaultIfBlank(request.getParameter("type"), "big");// 转化目标（转为大写还是小写）
 		if ("big".equalsIgnoreCase(type)) {
 			value = value.toUpperCase();
 		} else if ("small".equalsIgnoreCase(type)) {
+			value = value.toLowerCase();
+		}
+		return JSONObject.toJSONString(value);
+	}
+	
+	/**
+	 * js加密、解密
+	 * @param request
+	 * @return
+	 */
+	@ResponseBody
+	@RequestMapping("/jsoperate")
+	public String jsoperate(HttpServletRequest request) {
+		String value = StringUtils.defaultIfBlank(request.getParameter("target"), "");// 源js内容
+		String type = StringUtils.defaultIfBlank(request.getParameter("type"), "encryption");// 加密/解密
+		if ("encryption".equalsIgnoreCase(type)) {// 加密
+			value = value.toUpperCase();
+		} else if ("decrypt".equalsIgnoreCase(type)) {// 解密
 			value = value.toLowerCase();
 		}
 		return JSONObject.toJSONString(value);
