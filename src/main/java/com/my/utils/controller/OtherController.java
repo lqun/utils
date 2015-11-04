@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.alibaba.fastjson.JSONObject;
 import com.my.utils.constant.UtilsConstantEnum.OtherTypeEnum;
+import com.my.utils.util.ProjectUtil;
 
 /**
  * 其它操作相关controller
@@ -42,14 +43,14 @@ public class OtherController {
 	 * @return
 	 */
 	@ResponseBody
-	@RequestMapping("/convertCharacter")
+	@RequestMapping(value="/convertCharacter", produces = "text/html;charset=UTF-8")
 	public String convertCharacter(HttpServletRequest request) {
 		String value = StringUtils.defaultIfBlank(request.getParameter("target"), "");// 需要转化的内容
 		String type = StringUtils.defaultIfBlank(request.getParameter("type"), "big");// 转化目标（转为大写还是小写）
 		if ("big".equalsIgnoreCase(type)) {
-			value = value.toUpperCase();
+			value = ProjectUtil.printUpperCase(value);
 		} else if ("small".equalsIgnoreCase(type)) {
-			value = value.toLowerCase();
+			value = ProjectUtil.printLowerCase(value);
 		}
 		return JSONObject.toJSONString(value);
 	}
@@ -60,7 +61,7 @@ public class OtherController {
 	 * @return
 	 */
 	@ResponseBody
-	@RequestMapping("/jsoperate")
+	@RequestMapping(value="/jsoperate", produces = "text/html;charset=UTF-8")
 	public String jsoperate(HttpServletRequest request) {
 		String value = StringUtils.defaultIfBlank(request.getParameter("target"), "");// 源js内容
 		String type = StringUtils.defaultIfBlank(request.getParameter("type"), "encryption");// 加密/解密

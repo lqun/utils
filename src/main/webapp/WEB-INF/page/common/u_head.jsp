@@ -34,7 +34,7 @@
 		           <ul class="dropdown-menu">
 		             <li><a href="javascript:void(0);" id="oth_0">字母大小写转换</a></li>
 		             <li><a href="javascript:void(0);" id="oth_1">js加密/解密</a></li>
-		             <li><a href="javascript:void(0);" id="oth_2">Something else here</a></li>
+		             <li><a href="javascript:void(0);" id="oth_2">人民币大小写转换</a></li>
 		           </ul>
 		         </li>
 		         <li><a href="javascript:void(0);" id="about_our">关于我们</a></li>

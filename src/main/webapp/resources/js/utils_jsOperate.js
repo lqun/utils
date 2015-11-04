@@ -7,12 +7,18 @@ u_operate.bind = {
 	button:function(){
 		$("#other_encryption").click(function(){
 			$("#type").val("encryption");
-			utils.tools.submitForm("jsoperateFrm");
+			var _val = $("#target").val();
+			if (typeof(_val) != 'undefined' && _val.length > 0) {
+				utils.tools.submitForm("jsoperateFrm");
+			}
 		});
 		
 		$("#other_decrypt").click(function(){
 			$("#type").val("decrypt");
-			utils.tools.submitForm("jsoperateFrm");
+			var _val = $("#target").val();
+			if (typeof(_val) != 'undefined' && _val.length > 0) {
+				utils.tools.submitForm("jsoperateFrm");
+			}
 		});
 	}
 };
