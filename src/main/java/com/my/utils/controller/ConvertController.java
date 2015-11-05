@@ -47,10 +47,14 @@ public class ConvertController {
 		logger.info("========开始执行大小写转换=========");
 		String value = StringUtils.defaultIfBlank(request.getParameter("target"), "");// 需要转化的内容
 		String type = StringUtils.defaultIfBlank(request.getParameter("type"), "big");// 转化目标（转为大写还是小写）
-		if ("big".equalsIgnoreCase(type)) {
-			value = ConvertUtils.printUpperCase(value);
-		} else if ("small".equalsIgnoreCase(type)) {
-			value = ConvertUtils.printLowerCase(value);
+		try {
+			if ("big".equalsIgnoreCase(type)) {
+				value = ConvertUtils.printUpperCase(value);
+			} else if ("small".equalsIgnoreCase(type)) {
+				value = ConvertUtils.printLowerCase(value);
+			}
+		} catch (Exception e) {
+			logger.error("大小写转换出错", e);
 		}
 		logger.info("========开始执行大小写转换结束，转换结果："+value);
 		return JSONObject.toJSONString(value);
@@ -67,14 +71,42 @@ public class ConvertController {
 	public String convertMoney(HttpServletRequest request) {
 		logger.info("========开始执行人民币大小写转换=========");
 		String value = StringUtils.defaultIfBlank(request.getParameter("target"), "");// 需要转化的内容
-		String type = StringUtils.defaultIfBlank(request.getParameter("type"), "big");// 转化目标（转为大写还是小写）
-		if ("big".equalsIgnoreCase(type)) {
-			value = ConvertUtils.changeMoneyToUpper(value);
-		} else if ("small".equalsIgnoreCase(type)) {
-			value = ConvertUtils.printLowerCase(value);
+		String type = StringUtils.defaultIfBlank(request.getParameter("type"), "big");// 转化目标
+		try {
+			if ("big".equalsIgnoreCase(type)) {
+				value = ConvertUtils.changeMoneyToUpper(value);
+			} else if ("small".equalsIgnoreCase(type)) {
+				value = ConvertUtils.printLowerCase(value);
+			}
+		} catch (Exception e) {
+			logger.error("人民币大小写转换出错", e);
 		}
 		logger.info("========执行人民币大小写转换结束，转换结果："+value);
 		return JSONObject.toJSONString(value);
 	}
 	
+	/**
+	 * 返回中文和Unicode互为转换结果
+	 * @param map
+	 * @param request
+	 * @return
+	 */
+	@ResponseBody
+	@RequestMapping(value="/convertUnicode", produces = "text/html;charset=UTF-8")
+	public String convertToUnicode(HttpServletRequest request) {
+		logger.info("========开始执行中文和Unicode互为转换=========");
+		String value = StringUtils.defaultIfBlank(request.getParameter("target"), "");// 需要转化的内容
+		String type = StringUtils.defaultIfBlank(request.getParameter("type"), "big");// 转化目标
+		try {
+			if ("un".equalsIgnoreCase(type)) {
+				value = ConvertUtils.str2Unicode(value);
+			} else if ("ch".equalsIgnoreCase(type)) {
+				value = ConvertUtils.unicode2str(value);
+			}
+		} catch (Exception e) {
+			logger.error("中文和Unicode互为转换出错", e);
+		}
+		logger.info("========执行中文和Unicode互为转换结束，转换结果："+value);
+		return JSONObject.toJSONString(value);
+	}
 }

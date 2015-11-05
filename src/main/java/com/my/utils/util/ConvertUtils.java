@@ -1,7 +1,10 @@
 package com.my.utils.util;
 
 import java.text.DecimalFormat;
-import java.text.NumberFormat;
+import java.util.StringTokenizer;
+import java.util.regex.Pattern;
+
+import org.apache.commons.lang.StringUtils;
 
 
 /**
@@ -116,4 +119,45 @@ public class ConvertUtils {
 		return instead_zero;
 	}
 	
+	/**
+	 * 中文转unicode
+	 * @param string
+	 * @return
+	 */
+	public static String str2Unicode(String str) {
+		StringBuffer unicode = new StringBuffer();
+		if (StringUtils.isNotBlank(str)) {
+			char charArry[] = str.toCharArray();
+			for (int i = 0; i < charArry.length; i++) {
+		       if (charArry[i] >= 19968 && charArry[i] <= 171941) {
+		    	   // 转换为unicode
+		    	   unicode.append("\\u" + Integer.toHexString(charArry[i]));
+		       } else {
+		    	   unicode.append(charArry[i]);
+		       }
+			}
+		}
+        return unicode.toString();
+    }
+	
+	/**
+	 * unicode转中文
+	 * @param string
+	 * @return
+	 */
+	public static String unicode2str(String str) {
+		if (StringUtils.isNotBlank(str)) {
+			int n = str.length() / 6;
+			StringBuffer sb = new StringBuffer(n);
+			// 分割字符串
+			StringTokenizer stringTokenizer = new StringTokenizer(str, "\\u", false);
+			while(stringTokenizer.hasMoreTokens()){
+				String code = stringTokenizer.nextToken();
+				char ch = (char) Integer.parseInt(code, 16);  
+				sb.append(ch);  
+	        }
+		    str = sb.toString();
+		}
+        return str;
+    }
 }

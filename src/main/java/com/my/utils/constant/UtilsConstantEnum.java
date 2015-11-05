@@ -15,7 +15,8 @@ public class UtilsConstantEnum {
 	 */
 	public enum ConvertTypeEnum {
 		CONVERT_TYPE_CHAR("1", "字母大小写转换", "convert/u_convertCharacter"),
-		CONVERT_TYPE_RMB("2", "人民币大小写转换", "convert/u_convertMoney");
+		CONVERT_TYPE_RMB("2", "人民币大小写转换", "convert/u_convertMoney"),
+		CONVERT_TYPE_UNICODE("3", "unicode中文互转", "convert/u_convertUnicode");
 		
 		private String typeCode; // 类型
 		private String typeDesc; // 类型描述

@@ -42,6 +42,7 @@
 		           <ul class="dropdown-menu">
 		             <li><a href="javascript:void(0);" id="convert_0">字母大小写转换</a></li>
 		             <li><a href="javascript:void(0);" id="convert_1">人民币大小写转换</a></li>
+		             <li><a href="javascript:void(0);" id="convert_2">Unicode中文转换</a></li>
 		           </ul>
 		         </li>
 		         <li class="dropdown">

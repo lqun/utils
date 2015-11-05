@@ -40,6 +40,8 @@ utils.bind = {
 				window.location.href="/convert/convertPage?type=1";
 			} else if (_id == "convert_1") {// 人民币大小写转换
 				window.location.href="/convert/convertPage?type=2";
+			} else if (_id == "convert_2") {
+				window.location.href="/convert/convertPage?type=3";
 			}
 		});
 	},
