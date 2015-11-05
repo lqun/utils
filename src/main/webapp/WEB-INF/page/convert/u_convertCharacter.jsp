@@ -5,7 +5,7 @@
 <head>
 <jsp:include page="../common/u_head_ref.jsp" />
 <title>大小写在线转换</title>
-<script src="/resources/js/utils_convertCharacter.js" type="text/javascript"></script>
+<script src="/resources/js/utils_convertChar.js" type="text/javascript"></script>
 </head>
 <body>
 <!-- 头部开始 -->
@@ -18,15 +18,15 @@
 	  <li><a href="Javascript:void(0)">其它工具</a></li>
 	  <li class="active">字母大小写转换</li>
 	</ol>
-        <form id="convertFrm" role="form" action="/other/convertCharacter">
+        <form id="convertFrm" role="form" action="/convert/convertCharacter">
           <input type="hidden" id="type" name="type" value="big" />
 		  <div class="form-group">
 		    <label for="name">请输入您要转换的内容:</label>
 		    <textarea id="target" name="target" class="form-control" rows="15" cols="10"></textarea>
 		  </div>
 		</form>
-		<button type="button" id="other_big" class="btn btn-success">转换成大写</button>
-		<button type="button" id="other_small" class="btn btn-info">转换成小写</button>
+		<button type="button" id="convert_big" class="btn btn-success">转换成大写</button>
+		<button type="button" id="convert_small" class="btn btn-info">转换成小写</button>
      </div>
   </div>
 </div>

@@ -22,19 +22,32 @@
 		           </ul>
 		         </li>
 		         <li class="dropdown">
-		           <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">xml相关<span class="caret"></span></a>
+		           <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">加密/解密<span class="caret"></span></a>
 		           <ul class="dropdown-menu">
-		             <li><a href="javascript:void(0);" id="xml_0">xml格式化</a></li>
-		             <li><a href="javascript:void(0);" id="xml_1">Another action</a></li>
-		             <li><a href="javascript:void(0);" id="xml_2">Something else here</a></li>
+		             <li><a href="javascript:void(0);" id="encryption_0">xml格式化</a></li>
+		             <li><a href="javascript:void(0);" id="encryption_1">Another action</a></li>
+		             <li><a href="javascript:void(0);" id="encryption_2">Something else here</a></li>
+		           </ul>
+		         </li>
+		         <li class="dropdown">
+		           <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">编码/解码<span class="caret"></span></a>
+		           <ul class="dropdown-menu">
+		             <li><a href="javascript:void(0);" id="encode_0">xml格式化</a></li>
+		             <li><a href="javascript:void(0);" id="encode_1">Another action</a></li>
+		             <li><a href="javascript:void(0);" id="encode_2">Something else here</a></li>
+		           </ul>
+		         </li>
+		         <li class="dropdown">
+		           <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">转换工具<span class="caret"></span></a>
+		           <ul class="dropdown-menu">
+		             <li><a href="javascript:void(0);" id="convert_0">字母大小写转换</a></li>
+		             <li><a href="javascript:void(0);" id="convert_1">人民币大小写转换</a></li>
 		           </ul>
 		         </li>
 		         <li class="dropdown">
 		           <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">其它工具<span class="caret"></span></a>
 		           <ul class="dropdown-menu">
-		             <li><a href="javascript:void(0);" id="oth_0">字母大小写转换</a></li>
-		             <li><a href="javascript:void(0);" id="oth_1">js加密/解密</a></li>
-		             <li><a href="javascript:void(0);" id="oth_2">人民币大小写转换</a></li>
+		             <li><a href="javascript:void(0);" id="oth_0">电话号码归属地查询</a></li>
 		           </ul>
 		         </li>
 		         <li><a href="javascript:void(0);" id="about_our">关于我们</a></li>

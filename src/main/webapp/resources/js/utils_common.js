@@ -1,31 +1,44 @@
 var utils = {
 	init:function(){
 		utils.bind.json();
-		utils.bind.xml();
+		utils.bind.encryption();
+		utils.bind.code();
+		utils.bind.convert();
 		utils.bind.other();
 		utils.bind.about();
 	}
 };
 utils.bind = {
 	json:function(){
-		$("a[id^='json']").each(function(){
+		$("a[id^='json']").click(function(){
 			
 		});
 	},
-	xml:function(){
-		$("a[id^='xml']").each(function(){
+	encryption:function(){
+		$("a[id^='encryption']").click(function(){
 			
+		});
+	},
+	code:function(){
+		$("a[id^='encode']").click(function(){
+			
+		});
+	},
+	convert:function(){
+		$("a[id^='convert']").click(function(){
+			var _this = $(this);
+			var _id = _this.attr("id");
+			if (_id == 'convert_0') {// 字母大小写转换
+				window.location.href="/convert/convertPage?type=1";
+			} else if (_id == "convert_1") {// 人民币大小写转换
+				window.location.href="/convert/convertPage?type=2";
+			}
 		});
 	},
 	other:function(){
 		$("a[id^='oth']").click(function(){
 			var _this = $(this);
 			var _id = _this.attr("id");
-			if (_id == 'oth_0') {// 字母大小写转换
-				window.location.href="/other/convertPage?type=1";
-			} else if (_id == "oth_1") {// js加密、解密
-				window.location.href="/other/convertPage?type=2";
-			}
 		});
 	},
 	about:function(){
