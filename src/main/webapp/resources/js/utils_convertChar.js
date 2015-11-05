@@ -1,6 +1,6 @@
 var u_convertchar = {
 	init:function(){
-		u_convert.bind.button();
+		u_convertchar.bind.button();
 	}
 };
 u_convertchar.bind = {
@@ -19,6 +19,10 @@ u_convertchar.bind = {
 			if (typeof(_val) != 'undefined' && _val.length > 0) {
 				utils.tools.submitForm("convertFrm");
 			}
+		});
+		
+		$("#clean").click(function(){
+			$("#target").val("");
 		});
 	}
 };

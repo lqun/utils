@@ -32,9 +32,9 @@
 		         <li class="dropdown">
 		           <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">编码/解码<span class="caret"></span></a>
 		           <ul class="dropdown-menu">
-		             <li><a href="javascript:void(0);" id="encode_0">xml格式化</a></li>
-		             <li><a href="javascript:void(0);" id="encode_1">Another action</a></li>
-		             <li><a href="javascript:void(0);" id="encode_2">Something else here</a></li>
+		             <li><a href="javascript:void(0);" id="encode_0">Base64编码/解码</a></li>
+		             <li><a href="javascript:void(0);" id="encode_1">URL编码</a></li>
+		             <li><a href="javascript:void(0);" id="encode_2">escape编码</a></li>
 		           </ul>
 		         </li>
 		         <li class="dropdown">

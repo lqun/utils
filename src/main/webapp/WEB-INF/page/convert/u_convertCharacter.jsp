@@ -25,8 +25,9 @@
 		    <textarea id="target" name="target" class="form-control" rows="15" cols="10"></textarea>
 		  </div>
 		</form>
-		<button type="button" id="convert_big" class="btn btn-success">转换成大写</button>
-		<button type="button" id="convert_small" class="btn btn-info">转换成小写</button>
+		<button type="button" id="convert_big" class="btn btn-success">转为大写</button>
+		<button type="button" id="convert_small" class="btn btn-info">转为小写</button>
+		<button type="button" id="clean" class="btn btn-danger">清除</button>
      </div>
   </div>
 </div>
