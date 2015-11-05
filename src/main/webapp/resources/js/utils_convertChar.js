@@ -1,11 +1,11 @@
-var u_convert = {
+var u_convertchar = {
 	init:function(){
 		u_convert.bind.button();
 	}
 };
-u_convert.bind = {
+u_convertchar.bind = {
 	button:function(){
-		$("#other_big").click(function(){
+		$("#convert_big").click(function(){
 			$("#type").val("big");
 			var _val = $("#target").val();
 			if (typeof(_val) != 'undefined' && _val.length > 0) {
@@ -13,7 +13,7 @@ u_convert.bind = {
 			}
 		});
 		
-		$("#other_small").click(function(){
+		$("#convert_small").click(function(){
 			$("#type").val("small");
 			var _val = $("#target").val();
 			if (typeof(_val) != 'undefined' && _val.length > 0) {
@@ -23,5 +23,5 @@ u_convert.bind = {
 	}
 };
 $(function(){
-	u_convert.init();
+	u_convertchar.init();
 });

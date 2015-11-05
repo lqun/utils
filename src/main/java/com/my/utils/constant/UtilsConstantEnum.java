@@ -9,20 +9,19 @@ package com.my.utils.constant;
 public class UtilsConstantEnum {
 	
 	/**
-	 * otherx项中子菜单对应枚举
+	 * 转换工具项中子菜单对应枚举
 	 * @author liuqun
 	 * @date 2015-11-4 下午1:44:19
 	 */
-	public enum OtherTypeEnum {
-		OTHER_TYPE_CHAR("1", "字母大小写转换", "other/u_convertCharacter"),
-		OTHER_TYPE_JS("2", "js加密/解密", "other/u_jsOperate"),
-		OTHER_TYPE_RMB(" 3", "人民币大小写转换", "");
+	public enum ConvertTypeEnum {
+		OTHER_TYPE_CHAR("1", "字母大小写转换", "convert/u_convertCharacter"),
+		OTHER_TYPE_RMB("2", "人民币大小写转换", "convert/u_convertMoney");
 		
 		private String typeCode; // 类型
 		private String typeDesc; // 类型描述
 		private String jspUrl;
 		
-		private OtherTypeEnum(String typeCode, String typeDesc, String jspUrl) {
+		private ConvertTypeEnum(String typeCode, String typeDesc, String jspUrl) {
 			this.typeCode = typeCode;
 			this.typeDesc = typeDesc;
 			this.jspUrl = jspUrl;
@@ -47,7 +46,7 @@ public class UtilsConstantEnum {
 		 */
 		public static String getJspUrl(String type) {
 			String url = "";
-			for (OtherTypeEnum eTypeEnum : OtherTypeEnum.values()) {
+			for (ConvertTypeEnum eTypeEnum : ConvertTypeEnum.values()) {
 				if (eTypeEnum.getTypeCode().equals(type)) {
 					url = eTypeEnum.getJspUrl();
 					break;
@@ -63,7 +62,7 @@ public class UtilsConstantEnum {
 		 */
 		public static String getDesc(String type) {
 			String desc = "";
-			for (OtherTypeEnum eTypeEnum : OtherTypeEnum.values()) {
+			for (ConvertTypeEnum eTypeEnum : ConvertTypeEnum.values()) {
 				if (eTypeEnum.getTypeCode().equals(type)) {
 					desc = eTypeEnum.getTypeDesc();
 					break;
