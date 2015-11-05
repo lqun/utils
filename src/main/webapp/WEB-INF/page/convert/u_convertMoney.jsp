@@ -36,7 +36,7 @@
    		  <div class="form-group">
 		      <label class="col-sm-1 control-label">结果:</label>
 		      <div class="col-sm-10">
-		         <input class="form-control" id="inputResult" type="text" placeholder="转换后的结果" disabled>
+		         <input class="form-control" id="inputResult" type="text" placeholder="转换后的结果" readonly="readonly"/>
 		      </div>
 		   </div>
 		</form>
