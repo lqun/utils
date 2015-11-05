@@ -34,6 +34,7 @@ u_convertmoney.tools = {
 			});
 		}
 };
+
 $(function(){
 	u_convertmoney.init();
 });
