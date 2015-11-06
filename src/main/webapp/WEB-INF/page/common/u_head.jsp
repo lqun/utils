@@ -24,8 +24,8 @@
 		         <li class="dropdown">
 		           <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">加密/解密<span class="caret"></span></a>
 		           <ul class="dropdown-menu">
-		             <li><a href="javascript:void(0);" id="encryption_0">xml格式化</a></li>
-		             <li><a href="javascript:void(0);" id="encryption_1">Another action</a></li>
+		             <li><a href="javascript:void(0);" id="encryption_0">MD5加密</a></li>
+		             <li><a href="javascript:void(0);" id="encryption_1">DES加密/解密</a></li>
 		             <li><a href="javascript:void(0);" id="encryption_2">Something else here</a></li>
 		           </ul>
 		         </li>

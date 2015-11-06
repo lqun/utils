@@ -16,7 +16,13 @@ utils.bind = {
 	},
 	encryption:function(){
 		$("a[id^='encryption']").click(function(){
-			
+			var _this = $(this);
+			var _id = _this.attr("id");
+			if (_id == 'encryption_0') {
+				window.location.href="/encrypt/convertPage?type=1";
+			} else if (_id == 'encryption_1') {
+				window.location.href="/encrypt/convertPage?type=2";
+			}
 		});
 	},
 	code:function(){
