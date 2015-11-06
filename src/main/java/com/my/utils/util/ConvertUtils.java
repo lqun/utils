@@ -2,6 +2,7 @@ package com.my.utils.util;
 
 import java.text.DecimalFormat;
 import java.util.StringTokenizer;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.commons.lang.StringUtils;
@@ -147,16 +148,13 @@ public class ConvertUtils {
 	 */
 	public static String unicode2str(String str) {
 		if (StringUtils.isNotBlank(str)) {
-			int n = str.length() / 6;
-			StringBuffer sb = new StringBuffer(n);
-			// 分割字符串
-			StringTokenizer stringTokenizer = new StringTokenizer(str, "\\u", false);
-			while(stringTokenizer.hasMoreTokens()){
-				String code = stringTokenizer.nextToken();
-				char ch = (char) Integer.parseInt(code, 16);  
-				sb.append(ch);  
-	        }
-		    str = sb.toString();
+			String regex = "\\\\u([0-9a-f]{4})";
+            Matcher mtatcher = Pattern.compile(regex).matcher(str);
+            while(mtatcher.find()){
+            	String code = mtatcher.group(1);
+            	char ch = (char) Integer.parseInt(code, 16);
+            	str = str.replaceAll("\\\\u"+code, String.valueOf(ch));
+            }
 		}
         return str;
     }
