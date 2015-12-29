@@ -83,4 +83,17 @@ public class EncryptionController {
 		}
 		return JSONObject.toJSONString(value);
 	}
+	
+	/**
+	 * SHA 加密
+	 * @param request
+	 * @return
+	 */
+	@ResponseBody
+	@RequestMapping(value="/SHAEncryption", produces = "text/html;charset=UTF-8")
+	public String shaEncryption(HttpServletRequest request) {
+		String value = StringUtils.defaultIfBlank(request.getParameter("target"), "");// 源内容
+		String type = StringUtils.defaultIfBlank(request.getParameter("type"), "1");// 何种方式加密
+		return JSONObject.toJSONString(EncryptUtils.shaEncrypt(value, type));
+	}
 }

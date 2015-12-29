@@ -2,6 +2,11 @@ package com.my.utils.util;
 
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
+import javax.xml.bind.annotation.adapters.HexBinaryAdapter;
+
+import org.apache.commons.lang.StringUtils;
 
 public class EncryptUtils {
 	
@@ -38,5 +43,36 @@ public class EncryptUtils {
 		} catch (Exception e) {
 			return null;
 		}
+	}
+	
+	/**
+	 * SHA加密
+	 * @param data
+	 * @param type
+	 * @return
+	 */
+	public static String shaEncrypt(String data, String type) {
+		if (StringUtils.isNotBlank(data)) {
+			if ("1".equals(type)) {
+				type = "SHA-1";
+			} else if ("256".equals(type)) {
+				type = "SHA-256";
+			} else if ("384".equals(type)) {
+				type = "SHA-384";
+			} else if ("512".equals(type)) {
+				type = "SHA-512";
+			} else {
+				type = "SHA-1";
+			}
+			try {
+				MessageDigest messageDigestd = MessageDigest.getInstance(type);
+				// 执行摘要方法
+				byte[] digest = messageDigestd.digest(data.getBytes());
+				data = new HexBinaryAdapter().marshal(digest);
+			} catch (NoSuchAlgorithmException e) {
+				e.printStackTrace();
+			}
+ 		}
+		return data;
 	}
 }
