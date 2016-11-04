@@ -62,7 +62,7 @@
 	</session-config>
 	
   <welcome-file-list>
-    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>/WEB-INF/page/index/u_home.jsp</welcome-file>
   </welcome-file-list>
   
 <!--   <error-page> -->

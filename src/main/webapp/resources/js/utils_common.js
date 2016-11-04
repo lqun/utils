@@ -11,7 +11,11 @@ var utils = {
 utils.bind = {
 	json:function(){
 		$("a[id^='json']").click(function(){
-			
+		  var _this = $(this);
+          var _id = _this.prop("id");
+          if (_id === 'json_0') {
+               window.location.href="/json/jsonPage?type=1"; 
+          }
 		});
 	},
 	encryption:function(){
@@ -74,7 +78,8 @@ utils.tools={
             	var result = $.parseJSON(data);
             	$("#target").val(result);
             },
-            error:function(){
+            error:function(e){
+                alert(e);
             }
 		});
 	},
@@ -89,6 +94,7 @@ utils.tools={
 				$("#"+targetId).val(result);
 			},
 			error:function(){
+                alert(e);
 			}
 		});
 	}

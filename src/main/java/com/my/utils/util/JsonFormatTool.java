@@ -104,5 +104,9 @@ public class JsonFormatTool {
             result.append(SPACE);  
         }  
         return result.toString();  
-    }  
+    }
+    
+    public static void main(String[] args) {
+    	System.err.println(formatJson("{\"q\":q}"));
+	}
 }

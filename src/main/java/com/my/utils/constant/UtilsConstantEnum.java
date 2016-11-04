@@ -202,4 +202,72 @@ public class UtilsConstantEnum {
 			return desc;
 		}
 	}
+	
+	/**
+	* @Title: UtilsConstantEnum.java  
+	* @Package com.my.utils.constant  
+	* @Description: json相关菜单
+	* @author qun.liu
+	* @date 2016年11月4日 下午5:28:19  
+	* @version V1.0
+	 */
+	public enum JsonTypeEnum {
+		ENCRYPT_TYPE_MD5("1", "json格式化", "json/u_jsonFormat"),
+		ENCRYPT_TYPE_URL("2", "", ""),
+		ENCRYPT_TYPE_ESCAPE("3", "", "");
+		
+		private String typeCode; // 类型
+		private String typeDesc; // 类型描述
+		private String jspUrl;// 页面路径
+		
+		private JsonTypeEnum(String typeCode, String typeDesc, String jspUrl) {
+			this.typeCode = typeCode;
+			this.typeDesc = typeDesc;
+			this.jspUrl = jspUrl;
+		}
+		
+		public String getTypeCode() {
+			return typeCode;   
+		}
+		
+		public String getTypeDesc() {
+			return typeDesc;
+		}
+		
+		public String getJspUrl() {
+			return jspUrl;
+		}
+		
+		/**
+		 * 根据type返回对应的jsp
+		 * @param type
+		 * @return
+		 */
+		public static String getJspUrl(String type) {
+			String url = "";
+			for (JsonTypeEnum eTypeEnum : JsonTypeEnum.values()) {
+				if (eTypeEnum.getTypeCode().equals(type)) {
+					url = eTypeEnum.getJspUrl();
+					break;
+				}
+			}
+			return url;
+		}
+		
+		/**
+		 * 根据type返回对应的描述
+		 * @param type
+		 * @return
+		 */
+		public static String getDesc(String type) {
+			String desc = "";
+			for (JsonTypeEnum eTypeEnum : JsonTypeEnum.values()) {
+				if (eTypeEnum.getTypeCode().equals(type)) {
+					desc = eTypeEnum.getTypeDesc();
+					break;
+				}
+			}
+			return desc;
+		}
+	}
 }
