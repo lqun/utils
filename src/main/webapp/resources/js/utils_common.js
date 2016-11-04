@@ -58,7 +58,7 @@ utils.bind = {
 	other:function(){
 		$("a[id^='oth']").click(function(){
 			var _this = $(this);
-			var _id = _this.attr("id");
+//			var _id = _this.attr("id");
 		});
 	},
 	about:function(){

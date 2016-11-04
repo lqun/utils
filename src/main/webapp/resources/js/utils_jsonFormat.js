@@ -19,4 +19,4 @@ u_jsonFormat.bind = {
 };
 $(function(){
     u_jsonFormat.init();
-})
+});
